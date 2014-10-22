@@ -8,39 +8,61 @@
 <body>
     
     <?PHP
-    $errorMsg = '';
-    
-    
-        
-    //declarations
+      //declarations
     $product_description = '';
     $discount_percent = '';
     $list_price = '';
     $discount = '';
     $dicount_price = '';
     $error_message = '';
-    
-    if ( empty($product_description) ) {
-        $error_message = 'description is a required field.'; }
-    else if ( !is_string ($product_description) )  {
-        $error_message = 'Descriptions must be only letters'; }
-        echo $error_message;
-    
-    
+      
     //get the data from the form
     $product_description = $_POST['product_description'];
     $list_price = $_POST['list_price'];
     $discount_percent = $_POST['discount_percent'];
     
+    //error messages if proper input is not done
+     if ( empty($product_description) )
+         {
+        $error_message = 'description is a required field.'; 
+         }
+    else if ( !is_string ($product_description) )
+        {
+        $error_message = 'Descriptions must be only letters';
+        }
+          echo '<p>', $error_message , '</p>';
+            
+        
+      if (!is_numeric($list_price))
+     {
+         $error_message = 'List price shoulud be numbers only';
+     }
+     else if(!is_numeric($discount_percent))
+     {
+         $error_message = 'discount Percent shoulud be numbers only';
+     }
+        echo '<p>', $error_message , '</p>';
+     
+     
+     
+       //if error message exist, EXIT and go to the index page     
+     if ($error_message != '')
+     {
+         include ('index.php');
+     exit();
+     }
+    
+    
    
     //calculations
+    $dicount = $list_price * ($discount_percent * .01);
     $dicount_price = $list_price - $discount;
-    $dicount = $list_price * $discount_percent * .01;
+    
     //applying currency
-    $list_price_formatted = "$".  number_format($list_price. 2);
+    $list_price_formatted = "$".  number_format($list_price, 2);
     $discount_percent_formatted = $discount_percent."%";
-    $discount_formatted = "$". number_format($dicount. 2);
-    $discount_price_formatted = "$". number_format($dicount_price. 2);      
+    $discount_formatted = "$". number_format($dicount, 2);
+    $discount_price_formatted = "$". number_format($dicount_price, 2);      
     
     ?>
        
