@@ -30,10 +30,8 @@
         {
         $error_message = 'Descriptions must be only letters';
         }
-          echo '<p>', $error_message , '</p>';
-            
-        
-      if (!is_numeric($list_price))
+                       
+      else if (!is_numeric($list_price))
      {
          $error_message = 'List price shoulud be numbers only';
      }
@@ -41,7 +39,7 @@
      {
          $error_message = 'discount Percent shoulud be numbers only';
      }
-        echo '<p>', $error_message , '</p>';
+      
      
      
      
