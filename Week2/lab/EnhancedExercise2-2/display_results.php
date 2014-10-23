@@ -1,38 +1,32 @@
 <?php
 
-
-
-
-
     //get the data from the form
    $investment = $_POST['investment'];
    $interest_rate = $_POST['interest_rate'];
     $years = $_POST['years'];
 
-   echo rand(0,2);
+   
     
     // validate investment entry
     if ( empty($investment) ) {
-        $error_message = 'Investment is a required field.'; }
+        $error_message = '<p>Investment is a required field.</p>'; }
     else if ( !is_numeric($investment) )  {
-        $error_message = 'Investment must be a valid number.'; }
+        $error_message = '<p>Investment must be a valid number.</p>'; }
     else if ( $investment <= 0 ) {
-        $error_message = 'Investment must be greater than zero.'; }
+        $error_message .= '<p>Investment must be greater than zero.</p>'; }
 
     // validate interest rate entry
-    else if ( empty($interest_rate ) ) {
-        $error_message = 'Interest rate is a required field.'; }
+     if ( empty($interest_rate ) ) {
+        $error_message .= '<p>Interest rate is a required field.</p>'; }
     else if ( !is_numeric($interest_rate) )  {
-        $error_message = 'Interest rate must be a valid number.'; }
+        $error_message .= '<p>Interest rate must be a valid number.</p>'; }
     else if ( $interest_rate <= 0 || $interest_rate >=15 ) {
-        $error_message = 'Interest rate must be greater than zero. and less then or equal to 15'; }
+        $error_message = '<p>Interest rate must be greater than zero. and less then or equal to 15</p>'; }
         
      if ( $years <=0 || $years >=50 ) {
-        $error_message = 'year have to be greater then 0 and less then 50'; }
+        $error_message .= '<p>year have to be greater then 0 and less then 50</p>'; }
     
-        
-        
-        
+            
         
         
 
@@ -60,11 +54,8 @@
     
     
 ?>
-<?php
 
-echo date('l jS \of F Y h:i:s A');
-?>
-exit([$status]);
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -87,8 +78,18 @@ exit([$status]);
         <span><?php echo $years; ?></span><br />
 
         <label>Future Value:</label>
-        <span><?php echo $future_value_f; ?></span><br />
+        <span><?php echo $future_value_f; ?></span><br/> 
+        
+        <br></br>
+        
+        <a href="index.php">"Start Over"</a>
     </div>
+    
+    
+    <?php
+    date_default_timezone_set('America/New_York');   
+echo "Today is ".date ('m/d/y H:i:s'). "<br>";
+?>
 
 </body>
 
