@@ -53,9 +53,7 @@
     $date = ('m/d/y');
     
 ?>
-<?php
-echo "Today is " . date("Y/m/d") . "<br>";
-?>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -79,6 +77,9 @@ echo "Today is " . date("Y/m/d") . "<br>";
 
         <label>Future Value:</label>
         <span><?php echo $future_value_f; ?></span><br />
+        <?php
+echo "Today is " . date("Y/m/d") . "<br>";
+?>
     </div>
 
 </body>

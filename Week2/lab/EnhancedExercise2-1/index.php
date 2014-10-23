@@ -8,7 +8,15 @@
 
 <body>
     <div id="content">
-         <?PHP echo  $error_message ?>
+        
+         <?PHP
+         if (!empty($error_message))
+         {        
+            echo  $error_message;
+                    
+         }
+            ?>
+          
         <h1>Product Discount Calculator</h1>
        
         <form action="display_discount.php" method="post">

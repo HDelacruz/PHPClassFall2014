@@ -5,7 +5,11 @@
     <title>Future Value Calculator</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
-
+    <?php
+$investment = "";
+    $interest_rate = "";
+    $years = "";
+    ?>
 <body>
     <div id="content">
     <h1>Future Value Calculator</h1>
