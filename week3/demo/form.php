@@ -17,7 +17,15 @@
                         . $_POST['fullname'] . 
                         "', email = 'test@test.com', phone = '4014443333', zip = '12345';";
                 
-                $pdo->exec($sql);
+                
+                echo $sql ;
+                
+                if ( $pdo->exec($sql) ) {
+                    echo 'Saved Data';                    
+                } else {
+                    echo 'Saved NOT Data';
+                }
+                    
                 
                 echo $_POST['fullname'];
             }
