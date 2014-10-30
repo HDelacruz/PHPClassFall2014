@@ -36,6 +36,6 @@ $dbs->bindParam(':zip', $zip, PDO::PARAM_INT);
       echo '<h1> user ',' was <strong>NOT</strong>updated</h1>';
  }                 
 ?>       
-         <a href="viewpage.php">View Users</a>
+        <a href="index.php">View Users</a>
     </body>
 </html>
