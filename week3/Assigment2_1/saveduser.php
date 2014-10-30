@@ -34,16 +34,16 @@ and open the template in the editor.
      {
          $error_message = 'zip is reauired and shoulud be numbers only';
      }
- else {
-          
+        
        //connect to database
        $db = new PDO("mysql:host=localhost;dbname=phpclassfall2014", "root", "");
                 
              
          //use to insert to database table  
-       $dbs = $db->prepare('insert into users set name = :name, phone = :phone, email = :email, zip :zip');  
- }          
- 
+       $dbs = $db->prepare('insert into users set name = :name, phone = :phone, email = :email, zip = :zip');  
+          
+        //var_dump($dbs);
+        
          $dbs->bindParam(':name',$name, PDO::PARAM_INT);
          $dbs->bindParam(':phone',$phone, PDO::PARAM_INT);
          $dbs->bindParam(':email',$email, PDO::PARAM_INT);
@@ -57,7 +57,7 @@ and open the template in the editor.
               {
                 echo 'Data NOT Saved';
               }          
-        
+ 
         ?>
     </body>
 </html>
