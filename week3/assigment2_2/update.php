@@ -31,13 +31,13 @@ and open the template in the editor.
             $results = $dbs->fetch(PDO::FETCH_ASSOC);
             ?>
         
-         <form action="#" method="post">            
+        <form action="updatingprocessing.php" method="post">            
              <input type="hidden" name="id" value="<?php echo $results['id']; ?>" />        <br>     
             full name: <input type="text" name="fullname" value="<?php echo $results['fullname'];?>" />  <br>           
             email: <input type="text" name="email" value="<?php echo $results['email'];?>" />   <br>          
             phone: <input type="text" name="phone" value="<?php echo $results['phone'];?>" />  <br>           
             zip: <input type="text" name="zip" value="<?php echo $results['zip'];?>" />  <br>     
-            <td><a href="update.php?id=',$value['id'],'">Submit</a></td>
+            <input type="submit" value="submit" >
             
             
         </form>

@@ -40,7 +40,7 @@ and open the template in the editor.
                 
              
          //use to insert to database table  
-       $dbs = $db->prepare('insert into users set name = :name, phone = :phone, email = :email, zip = :zip');  
+       $dbs = $db->prepare('insert into users set fullname = :name, phone = :phone, email = :email, zip = :zip');  
           
         //var_dump($dbs);
         
