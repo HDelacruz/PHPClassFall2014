@@ -29,44 +29,11 @@
     <legend>Settings</legend>
 
         <p>How did you hear about us?</p>
-        <input type="radio" name="heard_from"value="Search Engine"
-               
-     <?php 
- 
-      if($radio === 'Search Engine')
-        {
-          echo 'checked = "checked"';
-        }
-        
-      ?>          
-           />
+        <input type="radio" name="heard_from" value="Search Engine" />
         Search engine<br />
-        
-        <input type="radio" name="heard_from" value="Friend" 
-               
-     <?php 
- 
-      if($radio === 'Friend')
-        {
-          echo 'checked = "checked"';
-        }
-        
-      ?>
-               
-       
-               />
+        <input type="radio" name="heard_from" value="Friend" />
         Word of mouth<br />
-        <input type=radio name="heard_from" value="Other" 
-              
-      <?php 
- 
-      if($radio === 'Other')
-        {
-          echo 'checked = "checked"';
-        }
-        
-      ?>          
-               />
+        <input type=radio name="heard_from" value="Other" />
         Other<br />
 
         <p>Would you like to receive announcements about new products
@@ -84,11 +51,10 @@
         <p>Comments:</p>
         <textarea name="comments" rows="4" cols="50"></textarea>
     </fieldset>
-
     <input type="submit" value="Submit" />
-
     </form>
     <br />
+    
     </div>
 </body>
 </html>
