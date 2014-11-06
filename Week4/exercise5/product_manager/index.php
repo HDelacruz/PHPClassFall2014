@@ -13,7 +13,7 @@ if (isset($_POST['action'])) {
 
 if ($action == 'list_products') {
     // Get the current category ID
-    $category_id = $_GET['category_id'];
+    $category_id = filter_input(INPUT_GET, 'category_id');
     if (!isset($category_id)) {
         $category_id = 1;
     }
