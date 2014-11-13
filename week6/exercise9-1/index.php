@@ -46,7 +46,7 @@ switch ($action) {
             $message = 'You must enter an email address.';
             break;
         } 
-        else if ( filter_var($email, FILTER_VALIDATE_EMAIL) != false ) 
+        else if( filter_var($email, FILTER_VALIDATE_EMAIL) != false ) 
                
         
 
