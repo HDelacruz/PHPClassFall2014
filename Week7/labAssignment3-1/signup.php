@@ -55,62 +55,9 @@ $dbs->bindParam(':password', $password, PDO::PARAM_INT);
  } else {
       echo '<h1> user ',' was <strong>NOT</strong>updated</h1>';
  }
-        
-        
+                
   }
   
-   function check_login($username, $password){
-        $db = new PDO("mysql:host=localhost;dbname=phpclassfall2014", "root", "");
-        $dbs = $db->prepare('select * from signup where email=:email and password=:password');
-        $dbs->bindParam(':email', $username, PDO::PARAM_STR);
-        $dbs->bindParam(':password', $password, PDO::PARAM_STR);
-    if ($dbs->execute() && $dbs->rowcount() > 0) {
-       return true;
-    } else{
-        return false;
-    }
-}
-
-
-
-function emailExists($email)
-{
-   $db = new PDO("mysql:host=localhost;dbname=phpclassfall2014", "root", "");
-    
-    $query = $db->prepare('select * from signup where email=:email');
-    //bind the parameters. 
-    $query->bindParam(':email', $email, PDO::PARAM_INT);
-    //if the query executes and there is a row count,
-    if($query->execute() && $query->rowCount() > 0)
-    {
-        return TRUE;
-    }
-    else 
-    {
-        return FALSE;
-    }
-
-}
-
-
-function valid_login($username, $password){
-        $db = new PDO("mysql:host=localhost;dbname=phpclassfall2014", "root", "");
-        $dbs = $db->prepare('select * from signup where email=:email and password=:password');
-        $dbs->bindParam(':email', $username, PDO::PARAM_STR);
-    $dbs->bindParam(':password', $password, PDO::PARAM_STR);
-    if (empty($email) || (filter_var($email, FILTER_VALIDATE_EMAIL) == false) || (empty($password)) || (strlen($password) < 4)) {
-        //($dbs->execute() && $dbs->rowcount() > 0) {
-       return false;
-    } else{
-        return true;
-    }
-}
-
-       
-  
-  
-  
-               
-       
-       
-      ?>
+ 
+              
+            ?>
