@@ -22,12 +22,12 @@
    //checking make sure is not empty
 if (empty($email)) 
        {
-      $error_message = 'You must enter an email address.';        
+      $error_message .= '<P> You must enter an email address.<\p>';        
        }
        //make sure email is the right format
   else if( filter_var($email, FILTER_VALIDATE_EMAIL) == false )
   {
-      $error_message = 'email entered is not valid';
+      $error_message .=  'email entered is not valid.';
   }
    
   //echo out error message
@@ -56,9 +56,6 @@ $dbs->bindParam(':password', $password, PDO::PARAM_INT);
  }
         
         
-  }
+}
         
-               
-       
-       
-      ?>
+?>
