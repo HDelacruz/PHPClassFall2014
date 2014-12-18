@@ -55,7 +55,7 @@ if (empty($phone)){
   //echo out error message
 if (!empty($error_message)) {
     echo "<center>" . $error_message . "</center>";
-    include "index.html";  
+    include "index.php";  
     Exit();
    
 }
