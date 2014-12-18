@@ -120,6 +120,8 @@ if (!empty($error_message)) {
 
             <span>Comments:</span><br />
             <span><?php echo $comments; ?></span><br />
+            
+            <td><a href="display.php?id=',$value['id'],'">Display Database</a></td>';
 </div>
 
         

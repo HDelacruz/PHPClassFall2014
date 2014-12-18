@@ -35,9 +35,9 @@
 
                 <p>Contact via:</p>
                 <select name="contact_via">
-                        <option value="email"<?php if (isset($contact_via) && $contact_via == "email"){ echo ' selected = "selected"'; } ?>>Email</option>
-                        <option value="text"<?php if (isset($contact_via) && $contact_via == "text"){ echo ' selected = "selected"'; } ?>>Text Message</option>
-                        <option value="phone"<?php if (isset($contact_via) && $contact_via == "phone"){ echo ' selected = "selected"'; } ?>>Phone</option>
+                        <option value="email"<?php if (isset($contact) && $contact == "email"){ echo ' selected '; } ?>>Email</option>
+                        <option value="text"<?php if (isset($contact) && $contact == "text"){ echo ' selected '; } ?>>Text Message</option>
+                        <option value="phone"<?php if (isset($contact) && $contact == "phone"){ echo ' selected '; } ?>>Phone</option>
                 </select>
 
                 <p>Comments: (optional)</p>
